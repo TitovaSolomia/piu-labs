@@ -1,0 +1,183 @@
+html {
+  font-size: 16px;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: rgb(178, 0, 60);
+}
+
+body {
+  background-color: rgba(255, 240, 245, 0.6);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h1 {
+  color: rgb(178, 0, 60);
+  font-size: 2rem;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: rgb(255, 192, 203);
+  color: rgb(178, 0, 60);
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 15px 50px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  border: 2px solid rgb(178, 0, 60);
+}
+
+.btn:hover {
+  background-color: rgb(255, 150, 180);
+}
+
+footer {
+  padding: 20px;
+}
+
+.back {
+  text-decoration: none;
+  color: rgb(178, 0, 60);
+  font-weight: bold;
+  border: 2px solid rgb(178, 0, 60);
+  border-radius: 20px;
+  padding: 8px 20px;
+  background-color: rgba(255, 192, 203, 0.4);
+  transition: 0.3s;
+}
+
+.back:hover {
+  background-color: rgb(255, 150, 180);
+}
+
+:root {
+  --accent: rgb(178, 0, 60);
+  --accent-200: rgb(255, 192, 203);
+  --accent-300: rgb(255, 150, 180);
+  --page-bg: rgba(255, 240, 245, 0.6);
+  --card-bg: rgba(255, 192, 203, 0.35);
+  --card-bg-strong: rgba(255, 192, 203, 0.55);
+  --text: rgb(178, 0, 60);
+  --muted: color-mix(in oklab, var(--text), white 55%);
+  --radius: 18px;
+  --shadow: 0 8px 30px rgba(178, 0, 60, 0.12);
+  --maxw: 1100px;
+}
+
+body[data-page='uwagi'] {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+}
+
+body[data-page='uwagi'] header {
+  text-align: center;
+  padding: 26px 14px 8px;
+}
+
+body[data-page='uwagi'] h1 {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  margin: 0 0 0.6rem;
+  letter-spacing: 0.3px;
+}
+
+body[data-page='uwagi'] main {
+  width: 100%;
+  margin-inline: auto;
+  padding: 24px 20px 32px;
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+}
+
+body[data-page='uwagi'] .rail {
+  display: grid;
+  gap: 300px;
+}
+@media (min-width: 880px) {
+  body[data-page='uwagi'] .rail {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+body[data-page='uwagi'] aside {
+  background: var(--card-bg);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+}
+body[data-page='uwagi'] aside h2 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.1rem, 2.1vw, 1.35rem);
+}
+body[data-page='uwagi'] aside ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+body[data-page='uwagi'] article {
+  background: white;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+body[data-page='uwagi'] article h2 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+}
+body[data-page='uwagi'] article p,
+body[data-page='uwagi'] article ul {
+  margin: 0 0 1rem;
+}
+body[data-page='uwagi'] article ul {
+  padding-left: 1.25rem;
+}
+
+body[data-page='uwagi'] table {
+  width: 100%;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+}
+body[data-page='uwagi'] thead th {
+  text-align: center;
+  background: var(--accent-200);
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+}
+body[data-page='uwagi'] td {
+  padding: 0.85rem 1rem;
+  vertical-align: top;
+}
+
+body[data-page='uwagi'] footer {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  width: 100%;
+  padding: 18px 14px 26px;
+  text-align: center;
+}

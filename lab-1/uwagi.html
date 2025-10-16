@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Uwagi o formularzach HTML</title>
+    <meta
+      name="description"
+      content="Kiedy stosować formularze HTML, kiedy unikać oraz zestawienie zalet i wad."
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body data-page="uwagi">
+    <header>
+      <h1>Uwagi o formularzach HTML</h1>
+    </header>
+
+    <main>
+      <section class="rail">
+        <aside aria-labelledby="lepiej-uzywac">
+          <h2 id="lepiej-uzywac">Lepiej używać, gdy:</h2>
+          <ul>
+            <li>
+              potrzebujesz zebrać dane (kontakt, logowanie, proste rejestracje);
+            </li>
+            <li>
+              chcesz skorzystać z natywnych typów pól i podstawowej walidacji;
+            </li>
+            <li>
+              formularz jest nieskomplikowany lub podzielony na krótkie kroki.
+            </li>
+          </ul>
+        </aside>
+
+        <aside aria-labelledby="lepiej-unikac">
+          <h2 id="lepiej-unikac">Lepiej unikać, gdy:</h2>
+          <ul>
+            <li>wymagasz intensywnych interakcji w czasie rzeczywistym;</li>
+            <li>
+              logika biznesowa po stronie serwera jest rozbudowana i zmienna;
+            </li>
+            <li>
+              formularz jest ogromny i trudny do utrzymania bez automatyzacji.
+            </li>
+          </ul>
+        </aside>
+      </section>
+
+      <article>
+        <section id="rola" aria-labelledby="rola-naglowek">
+          <h2 id="rola-naglowek">Rola formularzy</h2>
+          <p>
+            Formularze HTML są podstawowym sposobem wprowadzania danych przez
+            użytkowników — od prostych pól kontaktowych po ankiety i
+            rejestracje. Są lekkie, wspierane przez wszystkie przeglądarki i
+            szybko pozwalają uruchomić skuteczną interakcję człowiek → strona.
+          </p>
+        </section>
+
+        <section id="kiedy-stosowac" aria-labelledby="kiedy-stosowac-naglowek">
+          <h2 id="kiedy-stosowac-naglowek">Kiedy stosować</h2>
+          <ul>
+            <li>formularze kontaktowe i proste zgłoszenia,</li>
+            <li>zapisy do newsletterów,</li>
+            <li>krótkie ankiety lub rejestracje.</li>
+          </ul>
+        </section>
+
+        <section id="kiedy-unikac" aria-labelledby="kiedy-unikac-naglowek">
+          <h2 id="kiedy-unikac-naglowek">
+            Kiedy unikać samych formularzy HTML
+          </h2>
+          <ul>
+            <li>gdy potrzebna jest walidacja w czasie rzeczywistym,</li>
+            <li>
+              gdy pola zmieniają się dynamicznie w zależności od odpowiedzi,
+            </li>
+            <li>
+              gdy projekt wymaga płynnych animacji i zaawansowanych
+              mikro-interakcji.
+            </li>
+          </ul>
+        </section>
+        <section id="tabela" aria-labelledby="tabela-naglowek">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Zalety</th>
+                <th scope="col">Wady</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Prosto zbierają podstawowe dane i przekazują je do serwera.
+                </td>
+                <td>
+                  Zaawansowana walidacja i natychmiastowy feedback wymagają JS.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Lekkie i szybkie dzięki natywnym elementom przeglądarki.
+                </td>
+                <td>Brak wbudowanej analityki oraz przetwarzania danych.</td>
+              </tr>
+              <tr>
+                <td>
+                  Dobre do kontaktów, krótkich ankiet i prostych rejestracji.
+                </td>
+                <td>
+                  Skalowanie trudniejsze przy bardzo rozbudowanych formularzach.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Spójne działanie w popularnych przeglądarkach i na
+                  urządzeniach mobilnych.
+                </td>
+                <td>Brak natywnych animacji oraz efektów wizualnych.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <p><small>&copy; 2025 — Solomiia Titova</small></p>
+    </footer>
+  </body>
+</html>

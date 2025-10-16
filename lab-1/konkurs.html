@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Lab 1</title>
+    <link rel="stylesheet" href="css/konkurs.css" />
+  </head>
+  <body>
+    <div class="page">
+      <h1>
+        <span>Zgłoszenie</span><br />
+        <span>do Konkursu Plastycznego</span>
+        <label for="toggle"
+          ><span title="Zmień motyw" class="theme-btn">&#127763;</span></label
+        >
+        <input type="checkbox" id="toggle" />
+      </h1>
+      <div class="container">
+        <form action="https://httpbin.org/get" method="get">
+          <p>
+            <label for="name">Imię:</label><br />
+            <input
+              id="name"
+              name="name"
+              type="text"
+              maxlength="30"
+              required
+              autocomplete="given-name"
+            />
+          </p>
+
+          <p>
+            <label for="surname">Nazwisko:</label><br />
+            <input
+              id="surname"
+              name="surname"
+              type="text"
+              maxlength="50"
+              required
+              autocomplete="family-name"
+            />
+          </p>
+
+          <p>
+            <label for="email">Email:</label><br />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+            />
+          </p>
+
+          <p>
+            <label for="city">Miasto:</label><br />
+            <input
+              id="city"
+              name="city"
+              list="cities"
+              placeholder="Wpisz lub wybierz"
+              required
+              autocomplete="address-level2"
+            />
+            <datalist id="cities">
+              <option value="Warszawa"></option>
+              <option value="Kraków"></option>
+              <option value="Wrocław"></option>
+              <option value="Poznań"></option>
+              <option value="Gdańsk"></option>
+            </datalist>
+          </p>
+
+          <p>
+            <label for="birth">Data urodzenia:</label><br />
+            <input id="birth" name="birth" type="date" required />
+          </p>
+
+          <p>
+            <label for="number">Liczba zgłaszanych prac (od 1 do 6):</label
+            ><br />
+            <input
+              id="number"
+              name="number"
+              type="number"
+              min="1"
+              max="6"
+              step="1"
+              required
+              inputmode="numeric"
+            />
+          </p>
+
+          <p>
+            <label for="colour">Kolor wiodący prac:</label><br />
+            <input
+              id="colour"
+              name="colour"
+              type="color"
+              value="#ffe000"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="category">Kategoria pracy:</label><br />
+            <select id="category" name="category" required>
+              <option value="" disabled selected>
+                -- wybierz kategorię --
+              </option>
+              <option value="rysunek">Rysunek</option>
+              <option value="malarstwo">Malarstwo</option>
+              <option value="grafika">Grafika</option>
+              <option value="rzezba">Rzeźba</option>
+              <option value="inne">Inne</option>
+            </select>
+          </p>
+
+          <fieldset>
+            <legend>Publikacja pracy online:</legend>
+            <label>
+              <input
+                id="pub-yes"
+                type="radio"
+                name="publish"
+                value="Tak"
+                required
+              />
+              Tak </label
+            ><br />
+            <label>
+              <input id="pub-no" type="radio" name="publish" value="No" />
+              Nie
+            </label>
+          </fieldset>
+
+          <p>
+            <label>
+              <input id="zgoda" name="zgoda" type="checkbox" required />
+              Zgadzam się na regulamin konkursu
+            </label>
+          </p>
+
+          <p>
+            <button type="submit">Wyślij zgłoszenie</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
