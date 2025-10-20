@@ -1,0 +1,81 @@
+:root {
+  --gap: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #e2c1e6;
+  color: #f7f7fb;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  display: inline-block;
+  cursor: pointer;
+  color: #3e1142;
+  transition: transform 0.2s ease;
+}
+
+h1:hover {
+  transform: scale(1.05);
+}
+
+h1::after {
+  content: '👑'; /* сама корона */
+  position: absolute;
+  right: -1.6em; /* наскільки відсунути від тексту */
+  top: 0.05em;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+h1:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--gap);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+}
+@media (min-width: 1200px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 80%;
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: none;
+  transition: box-shadow 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  img:hover {
+    box-shadow: 0 0 0 4px #f44fbd;
+    cursor: pointer;
+  }
+}
+
+figcaption {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-top: 6px;
+  color: black;
+}
