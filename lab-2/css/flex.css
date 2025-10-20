@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0 0 16px;
+}
+
+legend {
+  font-weight: 700;
+}
+
+fieldset {
+  border: 2px solid #d28a19;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+}
+
+:root {
+  --gap: 24px;
+  --card-h: 56px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  margin-top: auto;
+  padding: 18px;
+  border: 2px solid #d28a19;
+  border-radius: 12px;
+  justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.item {
+  background: #134ef8;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 14px;
+  height: var(--card-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 1 calc((100% - 2 * var(--gap)) / 3);
+
+  @media (max-width: 1024px) {
+    flex: none;
+    width: min(520px, 80%);
+  }
+}
+
+/* tryb czerwony */
+
+body:has(input[value='red']:checked) .container {
+  @media (max-width: 1024px) {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+}
+
+body:has(input[value='red']:checked) .item {
+  background: #e10f0f;
+  font-weight: 400;
+  flex: 1 1 0;
+
+  @media (max-width: 1024px) {
+    width: auto;
+    flex: 0 1 calc((100% - var(--gap)) / 2);
+    max-width: calc((100% - var(--gap)) / 2);
+  }
+}
+
+body:has(input[value='red']:checked) .item:nth-child(2) {
+  order: 0;
+}
+body:has(input[value='red']:checked) .item:nth-child(3) {
+  order: 1;
+}
+body:has(input[value='red']:checked) .item:nth-child(1) {
+  order: 2;
+}
+body:has(input[value='red']:checked) .item:nth-child(4) {
+  order: 3;
+}
+body:has(input[value='red']:checked) .item:nth-child(5) {
+  order: 4;
+}
+
+body:has(input[value='red']:checked) .item:nth-child(1) {
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1.6;
+
+  @media (max-width: 1024px) {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+body:has(input[value='red']:checked) .item:nth-child(1)::after {
+  content: 'Jestem większy i na środku!';
+  display: block;
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+/*  TRYB ZIELONY*/
+body:has(input[value='green']:checked) .container {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+    gap: 25px;
+  }
+}
+
+body:has(input[value='green']:checked) .item {
+  background: #177a16;
+  padding-inline: 2.4em;
+  position: relative;
+  flex: 1 1 0;
+
+  @media (max-width: 1024px) {
+    flex: 0 0 auto;
+    max-width: none;
+    margin-left: auto;
+  }
+}
+
+body:has(input[value='green']:checked) .item:nth-child(1) {
+  flex-grow: 5;
+  padding-inline: 2em;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+body:has(input[value='green']:checked) .item:nth-child(1)::before,
+body:has(input[value='green']:checked) .item:nth-child(1)::after {
+  content: '😀';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(1);
+  font-size: 2em;
+  pointer-events: none;
+}
+body:has(input[value='green']:checked) .item:nth-child(1)::before {
+  left: 0.8em;
+}
+body:has(input[value='green']:checked) .item:nth-child(1)::after {
+  right: 0.8em;
+}
+
+body:has(input[value='green']:checked) .item:nth-child(2) {
+  flex-grow: 4;
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
+}
+body:has(input[value='green']:checked) .item:nth-child(3) {
+  flex-grow: 3;
+
+  @media (max-width: 1024px) {
+    width: 70%;
+  }
+}
+body:has(input[value='green']:checked) .item:nth-child(4) {
+  flex-grow: 2;
+
+  @media (max-width: 1024px) {
+    width: 55%;
+  }
+}
+body:has(input[value='green']:checked) .item:nth-child(5) {
+  flex-grow: 1;
+
+  @media (max-width: 1024px) {
+    width: 40%;
+  }
+}
