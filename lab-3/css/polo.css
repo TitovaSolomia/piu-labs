@@ -1,0 +1,333 @@
+:root {
+  --blue-image: url('../images/polo_b.png');
+  --red-image: url('../images/polo_r.png');
+  --green-image: url('../images/polo_g.png');
+  --yellow-image: url('../images/polo_y.png');
+
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --card-bg-color: #fff;
+  --button-bg-color: #3498db;
+  --button-hover-color: #2980b9;
+  --muted: #6b7280;
+  --border: #d1d5db;
+  --accent: #1f6feb;
+  --border-radius: 8px;
+  --max-card-width: 500px;
+  --description-width: 300px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+  padding: 24px;
+}
+
+.card {
+  display: grid;
+  gap: 28px;
+  padding: 28px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  background: var(--card-bg-color);
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid var(--accent);
+  border-radius: var(--border-radius);
+  background: var(--blue-image) center/contain no-repeat;
+  transition: background-image 0.3s, border-color 0.3s;
+}
+
+.info {
+  padding: 20px;
+  background-color: var(--card-bg-color);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(24px, 2vw, 30px);
+}
+
+.Promocja {
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.description {
+  color: var(--muted);
+  margin: 10px 0 16px;
+}
+
+.controls {
+  display: grid;
+  gap: 16px;
+  margin: 10px 0;
+}
+
+.group .label {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.swatches,
+.sizes {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.swatch {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid #cbd5e1;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.swatch--blue {
+  background: #1f6feb;
+}
+
+.swatch--red {
+  background: #e11d48;
+}
+
+.swatch--green {
+  background: #22c55e;
+}
+
+.swatch--gold {
+  background: #f59e0b;
+}
+
+.size {
+  min-width: 48px;
+  padding: 0.55rem 0.9rem;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: var(--button-bg-color);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: var(--button-hover-color);
+}
+
+#red:checked ~ .card .cta {
+  background-color: red;
+  color: white;
+}
+
+#green:checked ~ .card .cta {
+  background-color: green;
+  color: white;
+}
+
+#yellow:checked ~ .card .cta {
+  background-color: yellow;
+  color: white;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#blue:checked ~ .card .photo {
+  background-image: var(--blue-image);
+  border-color: #0b4bcc;
+}
+
+#red:checked ~ .card .photo {
+  background-image: var(--red-image);
+  border-color: red;
+}
+
+#red:checked ~ .card .Promocja {
+  color: red;
+}
+
+#green:checked ~ .card .photo {
+  background-image: var(--green-image);
+  border-color: green;
+}
+
+#green:checked ~ .card .Promocja {
+  color: green;
+}
+
+#yellow:checked ~ .card .photo {
+  background-image: var(--yellow-image);
+  border-color: yellow;
+}
+
+#yellow:checked ~ .card .Promocja {
+  color: yellow;
+}
+
+#blue:checked ~ .card .swatch--blue {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #1f6feb;
+}
+
+#red:checked ~ .card .swatch--red {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #e11d48;
+}
+
+#green:checked ~ .card .swatch--green {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #22c55e;
+}
+
+#yellow:checked ~ .card .swatch--gold {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #f59e0b;
+}
+
+#blue:checked ~ #s:checked ~ .card label[for='s'],
+#blue:checked ~ #m:checked ~ .card label[for='m'],
+#blue:checked ~ #l:checked ~ .card label[for='l'],
+#blue:checked ~ #xl:checked ~ .card label[for='xl'] {
+  background-color: #1f6feb;
+  border-color: #1f6feb;
+  color: #fff;
+}
+
+#red:checked ~ #s:checked ~ .card label[for='s'],
+#red:checked ~ #m:checked ~ .card label[for='m'],
+#red:checked ~ #l:checked ~ .card label[for='l'],
+#red:checked ~ #xl:checked ~ .card label[for='xl'] {
+  background-color: #e11d48;
+  border-color: #e11d48;
+  color: #fff;
+}
+
+#green:checked ~ #s:checked ~ .card label[for='s'],
+#green:checked ~ #m:checked ~ .card label[for='m'],
+#green:checked ~ #l:checked ~ .card label[for='l'],
+#green:checked ~ #xl:checked ~ .card label[for='xl'] {
+  background-color: #22c55e;
+  border-color: #22c55e;
+  color: #fff;
+}
+
+#yellow:checked ~ #s:checked ~ .card label[for='s'],
+#yellow:checked ~ #m:checked ~ .card label[for='m'],
+#yellow:checked ~ #l:checked ~ .card label[for='l'],
+#yellow:checked ~ #xl:checked ~ .card label[for='xl'] {
+  background-color: #f59e0b;
+  border-color: #f59e0b;
+  color: #fff;
+}
+
+@media (max-width: 979px) {
+  .card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .photo {
+    margin: 0 auto;
+    max-width: 560px;
+  }
+
+  .info {
+    max-width: 620px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .swatches,
+  .sizes {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 14px;
+  }
+
+  .buy {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .price {
+    margin: 0;
+    text-align: center;
+  }
+
+  .cta {
+    width: min(420px, 90%);
+    margin: 0;
+  }
+}
+
+@media (min-width: 980px) {
+  .card {
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    padding: 40px 60px;
+  }
+
+  .photo {
+    justify-self: center;
+  }
+
+  .info {
+    margin-left: auto;
+    max-width: 500px;
+  }
+}

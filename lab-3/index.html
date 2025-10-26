@@ -1,12 +1,87 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Lab 3</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koszulka Polo</title>
+    <link rel="stylesheet" href="css/polo.css" />
   </head>
   <body>
-    <h1>Lab 3</h1>
-    <a href="..">Powrót</a>
+    <main class="container">
+      <input
+        type="radio"
+        name="color"
+        id="blue"
+        class="visually-hidden"
+        checked
+      />
+      <input type="radio" name="color" id="red" class="visually-hidden" />
+      <input type="radio" name="color" id="green" class="visually-hidden" />
+      <input type="radio" name="color" id="yellow" class="visually-hidden" />
+
+      <input type="radio" name="size" id="s" class="visually-hidden" />
+      <input type="radio" name="size" id="m" class="visually-hidden" checked />
+      <input type="radio" name="size" id="l" class="visually-hidden" />
+      <input type="radio" name="size" id="xl" class="visually-hidden" />
+
+      <div class="card">
+        <section class="photo">
+          <div class="photo_img"></div>
+        </section>
+
+        <section class="info">
+          <div class="header">
+            <h2 class="title">Koszulka Polo</h2>
+            <span class="Promocja">Promocja!</span>
+          </div>
+          <p class="description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Perspiciatis commodi nihil odio ea harum eveniet. Quasi doloribus
+            laboriosam molestiae dolor.
+          </p>
+
+          <div class="controls">
+            <div class="group">
+              <div class="label">Kolor</div>
+              <div class="swatches">
+                <label
+                  class="swatch swatch--blue"
+                  for="blue"
+                  title="Niebieski"
+                ></label>
+                <label
+                  class="swatch swatch--red"
+                  for="red"
+                  title="Czerwony"
+                ></label>
+                <label
+                  class="swatch swatch--green"
+                  for="green"
+                  title="Zielony"
+                ></label>
+                <label
+                  class="swatch swatch--gold"
+                  for="yellow"
+                  title="Żółty"
+                ></label>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="label">Rozmiar</div>
+              <div class="sizes">
+                <label class="size" for="s">S</label>
+                <label class="size" for="m">M</label>
+                <label class="size" for="l">L</label>
+                <label class="size" for="xl">XL</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="price">59,99 zł</div>
+          <a href="#" class="cta">🛒 Do koszyka</a>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
