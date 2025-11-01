@@ -2,11 +2,64 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lab 4</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Lab 4</h1>
-    <a href="..">Powrót</a>
+    <main class="board" id="board" aria-label="Tablica Kanban">
+      <section class="column" data-col="todo" aria-labelledby="col-todo-title">
+        <header class="column__header">
+          <h2 id="col-todo-title">
+            Do zrobienia <span class="count" data-count="todo">0</span>
+          </h2>
+          <div class="column__actions">
+            <button class="btn btn--ghost" data-action="colorizeColumn">
+              Koloruj kolumnę
+            </button>
+            <button class="btn btn--ghost" data-action="sort">Sortuj</button>
+            <button class="btn" data-action="add">Dodaj kartę</button>
+          </div>
+        </header>
+        <div class="cards" data-list="todo" aria-live="polite"></div>
+      </section>
+
+      <section
+        class="column"
+        data-col="doing"
+        aria-labelledby="col-doing-title"
+      >
+        <header class="column__header">
+          <h2 id="col-doing-title">
+            W trakcie <span class="count" data-count="doing">0</span>
+          </h2>
+          <div class="column__actions">
+            <button class="btn btn--ghost" data-action="colorizeColumn">
+              Koloruj kolumnę
+            </button>
+            <button class="btn btn--ghost" data-action="sort">Sortuj</button>
+            <button class="btn" data-action="add">Dodaj kartę</button>
+          </div>
+        </header>
+        <div class="cards" data-list="doing" aria-live="polite"></div>
+      </section>
+
+      <section class="column" data-col="done" aria-labelledby="col-done-title">
+        <header class="column__header">
+          <h2 id="col-done-title">
+            Zrobione <span class="count" data-count="done">0</span>
+          </h2>
+          <div class="column__actions">
+            <button class="btn btn--ghost" data-action="colorizeColumn">
+              Koloruj kolumnę
+            </button>
+            <button class="btn btn--ghost" data-action="sort">Sortuj</button>
+            <button class="btn" data-action="add">Dodaj kartę</button>
+          </div>
+        </header>
+        <div class="cards" data-list="done" aria-live="polite"></div>
+      </section>
+    </main>
+    <script src="app.js"></script>
   </body>
 </html>
