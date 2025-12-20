@@ -10,106 +10,22 @@
     <header class="topbar">
       <div class="wrap">
         <h1 class="title">Sklep odzieżowy</h1>
-        <div class="cart">
-          <span class="cart-label">Koszyk</span>
-          <span class="cart-badge" id="cartCount">0</span>
-        </div>
       </div>
     </header>
 
-    <main class="wrap">
-      <section class="grid" id="products">
-        <product-card data-sku="TSH-001">
-          <img slot="image" src="images/t-shirt.jpg" alt="T-shirt Basic" />
-          <span slot="promo">-20%</span>
-          <span slot="name">T-shirt Basic</span>
-          <span slot="price">79,99 zł</span>
-          <div slot="colors">
-            <span class="dot" style="--c: #111111" title="Czarny"></span>
-            <span class="dot" style="--c: #f5f5f5" title="Biały"></span>
-            <span class="dot" style="--c: #2b6cb0" title="Niebieski"></span>
-          </div>
-          <div slot="sizes">
-            <button class="chip" type="button" data-size="S">S</button>
-            <button class="chip" type="button" data-size="M">M</button>
-            <button class="chip" type="button" data-size="L">L</button>
-            <button class="chip" type="button" data-size="XL">XL</button>
-          </div>
-        </product-card>
+    <main class="wrap layout">
+      <product-list></product-list>
 
-        <product-card data-sku="HD-014">
-          <img
-            slot="image"
-            src="../components-demo/images/bluza.jpg"
-            alt="Bluza z kapturem"
-          />
-          <span slot="name">Bluza z kapturem</span>
-          <span slot="price">80 zł</span>
-          <div slot="colors">
-            <span class="dot" style="--c: #6b7280" title="Szary"></span>
-            <span class="dot" style="--c: #1f2937" title="Grafit"></span>
-          </div>
-          <div slot="sizes">
-            <button class="chip" type="button" data-size="M">M</button>
-            <button class="chip" type="button" data-size="L">L</button>
-            <button class="chip" type="button" data-size="XL">XL</button>
-          </div>
-        </product-card>
-
-        <product-card data-sku="JNS-203">
-          <img slot="image" src="images/jeans.jpg" alt="Jeansy" />
-          <span slot="promo">Nowość</span>
-          <span slot="name">Jeans Slim</span>
-          <span slot="price">130 zł</span>
-          <div slot="sizes">
-            <button class="chip" type="button" data-size="30">30</button>
-            <button class="chip" type="button" data-size="32">32</button>
-            <button class="chip" type="button" data-size="34">34</button>
-            <button class="chip" type="button" data-size="36">36</button>
-          </div>
-        </product-card>
-
-        <product-card data-sku="DRS-077">
-          <img slot="image" src="images/sukienka.jpg" alt="Sukienka" />
-          <span slot="name">Sukienka midi</span>
-          <span slot="price">120 zł</span>
-          <div slot="colors">
-            <span class="dot" style="--c: #b91c1c" title="Czerwony"></span>
-            <span class="dot" style="--c: #0f172a" title="Granat"></span>
-          </div>
-        </product-card>
-
-        <product-card data-sku="JKT-310">
-          <img slot="image" src="images/kurtka.jpg" alt="Kurtka przejściowa" />
-          <span slot="promo">-15%</span>
-          <span slot="name">Kurtka przejściowa</span>
-          <span slot="price">100 zł</span>
-          <div slot="sizes">
-            <button class="chip" type="button" data-size="S">S</button>
-            <button class="chip" type="button" data-size="M">M</button>
-            <button class="chip" type="button" data-size="L">L</button>
-          </div>
-        </product-card>
-
-        <product-card data-sku="CAP-009">
-          <img slot="image" src="images/sweter.jpg" alt="Sweter" />
-          <span slot="name">sweter</span>
-          <span slot="price">60 zł</span>
-          <div slot="colors">
-            <span class="dot" style="--c: #111111" title="Czarny"></span>
-            <span class="dot" style="--c: #16a34a" title="Zielony"></span>
-            <span class="dot" style="--c: #f59e0b" title="Pomarańcz"></span>
-          </div>
-        </product-card>
-      </section>
-
-      <section class="panel">
-        <div class="panel-row">
-          <div class="panel-title">Ostatnio dodane</div>
-          <div class="panel-list" id="lastAdded"></div>
-        </div>
-      </section>
+      <aside class="cart-sidebar" id="cartSidebar">
+        <shopping-cart></shopping-cart>
+      </aside>
     </main>
+
+    <button class="cart-fab" id="cartFab" type="button" aria-expanded="false">
+      🛒 Koszyk
+    </button>
+
+    <div class="cart-overlay" id="cartOverlay" hidden></div>
 
     <script type="module" src="app.js"></script>
   </body>

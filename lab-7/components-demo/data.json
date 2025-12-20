@@ -1,0 +1,56 @@
+[
+  {
+    "sku": "TSH-001",
+    "name": "T-shirt Basic",
+    "price": 79.99,
+    "image": "images/t-shirt.jpg",
+    "promo": "-20%",
+    "colors": ["#111111", "#f5f5f5", "#2b6cb0"],
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "sku": "HD-014",
+    "name": "Bluza z kapturem",
+    "price": 80,
+    "image": "images/bluza.jpg",
+    "promo": "",
+    "colors": ["#6b7280", "#1f2937"],
+    "sizes": ["M", "L", "XL"]
+  },
+  {
+    "sku": "JNS-203",
+    "name": "Jeans Slim",
+    "price": 130,
+    "image": "images/jeans.jpg",
+    "promo": "Nowość",
+    "colors": [],
+    "sizes": ["30", "32", "34", "36"]
+  },
+  {
+    "sku": "DRS-077",
+    "name": "Sukienka midi",
+    "price": 120,
+    "image": "images/sukienka.jpg",
+    "promo": "",
+    "colors": ["#b91c1c", "#0f172a"],
+    "sizes": []
+  },
+  {
+    "sku": "JKT-310",
+    "name": "Kurtka przejściowa",
+    "price": 100,
+    "image": "images/kurtka.jpg",
+    "promo": "-15%",
+    "colors": [],
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "sku": "CAP-009",
+    "name": "Sweter",
+    "price": 60,
+    "image": "images/sweter.jpg",
+    "promo": "",
+    "colors": ["#111111", "#16a34a", "#f59e0b"],
+    "sizes": []
+  }
+]
